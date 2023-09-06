@@ -1,11 +1,12 @@
 from PyPDF2 import PdfReader
 from PIL import Image
 
-reader = PdfReader(r'C:\Users\DELL\Documents\Zalo Received Files\Thông báo nghỉ lễ 30-4.pdf')
-
-page = reader.pages[0]
-count = 0
-print(page.extract_text())
+# reader = PdfReader(r'C:\Users\DELL\Documents\Zalo Received Files\Thông báo nghỉ lễ 30-4.pdf')
+reader = PdfReader(r'C:\Users\DELL\Documents\Zalo Received Files\báo giá ổ cứng xuân la.pdf')
+if reader.is_encrypted:
+    page = reader.pages[0]
+    count = 0
+    print(page.extract_text())
 
 # for image_file_object in page.images:
 #     with open(str(count) + image_file_object.name, "wb") as fp:

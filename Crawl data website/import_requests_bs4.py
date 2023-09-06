@@ -8,8 +8,12 @@ print(soup)
 
 titles = soup.findAll('h3', class_='title-news')
 
-print(titles)
+print("titles",titles)
+
+script = soup.findAll('script')
+
+print("script",script)
 
 links = [link.find('a').attrs["href"] for link in titles]
 
-print(links)
+print("links",links)
